@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+<script type="text/javascript">
+function load()
+{
+setTimeout("window.open('http://localhost:5000/{{match_id}}', '_self');", 10000);
+}
+</script>
+    <title>Title</title>
+</head>
+<body onload="load()">
+<p>{{ name }}</p>
+<div class = "image"><img src = "{{ url_for('static', filename='map.jpg') }}" width="1000" height="1000"/>
+    {%if rosh == 0%}
+        <div class="roshan_icon" style="position:absolute; left: 50%; top: 50%; margin: -140px 0 0 -167px;"> <img src="{{ url_for('static', filename='roshan.png') }}" width="40" height="40" style="background-color:yellow;"> </div>
+    {%endif%}
+    <div class="player_icon_dire1" style="position:absolute; left: 50%; top: 50%; margin: {{direy[0]}}px 0 0 {{direx[0]}}px;"> <img src={{heroesd[0]}} width="32" height="32" style="background-color:red;"> </div>
+    <div class="player_icon_dire2" style="position:absolute; left: 50%; top: 50%; margin: {{direy[1]}}px 0 0 {{direx[1]}}px;"> <img src={{heroesd[1]}} width="32" height="32" style="background-color:red;"> </div>
+    <div class="player_icon_dire3" style="position:absolute; left: 50%; top: 50%; margin: {{direy[2]}}px 0 0 {{direx[2]}}px;"> <img src={{heroesd[2]}} width="32" height="32" style="background-color:red;"> </div>
+    <div class="player_icon_dire4" style="position:absolute; left: 50%; top: 50%; margin: {{direy[3]}}px 0 0 {{direx[3]}}px;"> <img src={{heroesd[3]}} width="32" height="32" style="background-color:red;"> </div>
+    <div class="player_icon_dire5" style="position:absolute; left: 50%; top: 50%; margin: {{direy[4]}}px 0 0 {{direx[4]}}px;"> <img src={{heroesd[4]}} width="32" height="32" style="background-color:red;"> </div>
+    <div class="player_icon_radiant1" style="position:absolute; left: 50%; top: 50%; margin: {{radianty[0]}}px 0 0 {{radiantx[0]}}px;"> <img src={{heroesr[0]}} width="32" height="32" style="background-color:green;"> </div>
+    <div class="player_icon_radiant2" style="position:absolute; left: 50%; top: 50%; margin: {{radianty[1]}}px 0 0 {{radiantx[1]}}px;"> <img src={{heroesr[1]}} width="32" height="32" style="background-color:green;"> </div>
+    <div class="player_icon_radiant3" style="position:absolute; left: 50%; top: 50%; margin: {{radianty[2]}}px 0 0 {{radiantx[2]}}px;"> <img src={{heroesr[2]}} width="32" height="32" style="background-color:green;"> </div>
+    <div class="player_icon_radiant4" style="position:absolute; left: 50%; top: 50%; margin: {{radianty[3]}}px 0 0 {{radiantx[3]}}px;"> <img src={{heroesr[3]}} width="32" height="32" style="background-color:green;"> </div>
+    <div class="player_icon_radiant5" style="position:absolute; left: 50%; top: 50%; margin: {{radianty[4]}}px 0 0 {{radiantx[4]}}px;"> <img src={{heroesr[4]}} width="32" height="32" style="background-color:green;"> </div>
+</div>
+
+</body>
+</html>
